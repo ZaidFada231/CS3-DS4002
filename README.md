@@ -1,14 +1,113 @@
 # Tornado Trend Analysis Case Study
-A DS 4002 Case Study by Zaid Fada
+**A DS 4002 Case Study by Zaid Fada**
 
-### Hook and Rubric Documents
-The hook document outlining the case study is the file labeled CS2Hook_Gerrymandering.pdf. The rubric CS2Rubric_Gerrymandering.pdf outlines the formatting, submission requirements, and final deliverables for this assignment. Both documents should be referenced continously throughout your completion of the case study to guarantee success on the assignment.
+**Date**: December 9th 2024
 
-### Data
-The  data can be obtained from FiveThirtyEight linked here. The Materials folder contains several images for various states, but there are more states to choose from on FiveThirtyEight. Additionally, you can find the declination angle (i.e., the numeric representation of the degree of partisan gerrymandering in a state) here, which you will use to verify the results of your image analysis.
 
-Reference Materials
-Hendricks, T. (2021, December 10). Detecting and measuring gerrymandering with python. Medium. https://towardsdatascience.com/detecting-and-measuring-gerrymandering-with-python-f85a1315acd4
+## Project Overview
 
-Bycoffe, A., Koeze, E., Wasserman, D., & Wolfe, J. (2018, January 25). The Atlas Of Redistricting. FiveThirtyEight. https://projects.fivethirtyeight.com/redistricting-maps
+This repository contains the code, data, and documentation for the Tornado Trend Analysis project. In this case study, we analyze tornado trends in the U.S. from 1999 to 2023 to develop time-series prediction models using ARIMA and SARIMA. The goal is to predict tornado-related metrics such as property damage, fatalities, and frequency with the aim of minimizing Mean Absolute Error (MAE). This analysis contributes to a better understanding of long-term trends in tornado activity and aims to improve disaster response strategies.
 
+The case study is targeted at a second-year UVA student, providing an engaging way to apply data science techniques to a real-world problem involving disaster preparedness.
+
+## Hook and Rubric Documents
+
+The **hook document** outlining the case study is titled *CS3-Hook.pdf*. This document provides an overview of the case study and aims to get students interested in the analysis. The **rubric** (*C3-Rubric.pdf*) outlines the formatting, submission requirements, and final deliverables for this assignment. Both documents should be continuously referenced throughout the completion of the case study to guarantee success on the assignment.
+
+## Repository Structure
+
+```bash
+.
+├── README.md                # Project overview and instructions for reproducing results
+├── LICENSE.md               # License information (MIT)
+├── requirements.txt         # Python packages needed for the project
+├── CS3-Hook.pdf         # Hook document for the case study
+├── CS3-Rubric.pdf       # Rubric document for the case study
+├── SCRIPTS/
+│   ├── 1-data.ipynb         # Data preparation script to combine data over the years
+│   ├── 2-exploratory.ipynb  # Preliminary data discovery and exploratory analysis
+│   ├── 3-analysis.ipynb     # Detailed step-by-step analysis and model implementation
+│   └── 4-stats.ipynb        # Statistical analysis and interpretation of results
+├── DATA/
+│   └── Data.md              # Steps to download the dataset and data dictionary
+├── OUTPUT/
+│   └── plots/               # Figures generated during data discovery and analysis
+
+```
+
+## Software and Platform
+ 
+- **Programming Language**: Python
+- **Packages Required**:
+
+  - `pandas`
+  - `numpy`
+  - `scikit-learn`
+  - `scipy`
+  - `matplotlib`
+  - `statsmodels`
+
+- **Platform**: Windows, macOS, or Linux
+
+## Data
+
+The dataset for this project is sourced from the "NCDC Storm Events Database" and includes comprehensive tornado event data across the U.S. from 1999 to 2023. It contains information such as the date, location, injuries, fatalities, and property damage for each tornado event.
+
+## Instructions for Reproducing Results
+
+1. Clone this repository:
+
+   ```bash
+   git clone [repository link]
+   cd [repository directory]
+   ```
+
+2. Install the required Python packages: Ensure that Python 3.x is installed. Then, install the necessary packages by running:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Download and prepare the data:
+
+   - Go to the `1-data.ipynb` and run the cell to create the combined-df that we use across this github
+   - The dataset will be in the `DATA/` folder
+
+4. Run the exploratory plots:
+
+   - Go to `/SCRIPTS/2-exploratory.ipynb`, follow the comments in the cells and run each cell to see our exploratory-plots, or go to outputs to see them directly!
+
+5. Run the analysis:
+
+   - Go to `/SCRIPTS/3-analysis.ipynb`, follow the comments in the cells and run each cell to perform our analysis!
+
+6. Run the stats:
+
+   - Go to `/SCRIPTS/5-stats.ipynb`, follow the comments in the cells and run each cell to see where we got our takeaways from!
+
+7. Review the results:
+   - The model’s accuracy, precision, recall, and other performance metrics will be saved in the [results.md](OUTPUTS/results.md) file
+   - Visualizations will be saved in the `OUTPUTS/plots/` directory.
+
+# Tornado Analysis Results
+
+The analysis involved comparing tornado characteristics over the years, focusing on:
+- Proportion of Severe Tornadoes (F3 and Above)
+- Proportion of Injury-Causing Tornadoes
+- Tornado Counts by F-Scale
+- Trends in Tornado Frequency
+
+## Summary
+
+- Increasing Severity: The proportion of tornadoes classified as F3 and above has increased significantly over the years.
+- Decreasing Injuries: The proportion of injury-causing tornadoes has decreased, possibly due to improved early warning systems and preparedness.
+- Shifts in Tornado Frequency by Scale: There has been a notable shift in the frequency of tornado intensities, indicating a possible change in climate patterns affecting tornado activity.
+
+These insights could prove valuable in allocating resources for disaster management and developing proactive policies to protect vulnerable regions.
+
+
+  # References
+  
+[1] National Centers for Environmental Information, “Storm Events Database CSV Files.” [Online]. Available: https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/. [Accessed: Oct. 31, 2024].
+
+[2] Yennhi95zz, “A Guide to Time Series Models in Machine Learning: Usage, Pros, and Cons,” Medium, Jul. 28, 2019. [Online]. Available: https://medium.com/@yennhi95zz/a-guide-to-time-series-models-in-machine-learning-usage-pros-and-cons-ac590a75e8b3. [Accessed: Oct. 31, 2024].
+
+[3] S. Berdiales, *Forecasting Models: ARIMA*, bookdown.org, 2020. [Online]. Available: https://bookdown.org/sergioberdiales/tfm-kschool_gijon_air_pollution/forecasting-models-arima.html. [Accessed: Oct. 31, 2024].
