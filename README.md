@@ -1,8 +1,8 @@
 # Tornado Trend Analysis Case Study
+
 **A DS 4002 Case Study by Zaid Fada**
 
 **Date**: December 9th 2024
-
 
 ## Project Overview
 
@@ -12,7 +12,7 @@ The case study is targeted at a second-year UVA student, providing an engaging w
 
 ## Hook and Rubric Documents
 
-The **hook document** outlining the case study is titled *CS3-Hook.pdf*. This document provides an overview of the case study and aims to get students interested in the analysis. The **rubric** (*C3-Rubric.pdf*) outlines the formatting, submission requirements, and final deliverables for this assignment. Both documents should be continuously referenced throughout the completion of the case study to guarantee success on the assignment.
+The **hook document** outlining the case study is titled _CS3-Hook.pdf_. This document provides an overview of the case study and aims to get students interested in the analysis. The **rubric** (_C3-Rubric.pdf_) outlines the formatting, submission requirements, and final deliverables for this assignment. Both documents should be continuously referenced throughout the completion of the case study to guarantee success on the assignment.
 
 ## Repository Structure
 
@@ -23,20 +23,23 @@ The **hook document** outlining the case study is titled *CS3-Hook.pdf*. This do
 ├── requirements.txt         # Python packages needed for the project
 ├── CS3-Hook.pdf         # Hook document for the case study
 ├── CS3-Rubric.pdf       # Rubric document for the case study
-├── SCRIPTS/
+├── MATERIALS/ARTICLES/
+│   ├── TwistersAndTrends-AnAnalysisOfUSTornadoActivityAndClimateChange.pdf        
+│   ├── ArimaAndSarima.pdf
+├── MATERIALS/SCRIPTS/
 │   ├── 1-data.ipynb         # Data preparation script to combine data over the years
 │   ├── 2-exploratory.ipynb  # Preliminary data discovery and exploratory analysis
 │   ├── 3-analysis.ipynb     # Detailed step-by-step analysis and model implementation
 │   └── 4-stats.ipynb        # Statistical analysis and interpretation of results
-├── DATA/
+├── MATERIALS/DATA/
 │   └── Data.md              # Steps to download the dataset and data dictionary
-├── OUTPUT/
-│   └── plots/               # Figures generated during data discovery and analysis
+├── MATERIALS/OUTPUT/
+│   └── plots/               # Figures generated during data
 
 ```
 
 ## Software and Platform
- 
+
 - **Programming Language**: Python
 - **Packages Required**:
 
@@ -68,8 +71,8 @@ The dataset for this project is sourced from the "NCDC Storm Events Database" an
    ```
 3. Download and prepare the data:
 
-   - Go to the `1-data.ipynb` and run the cell to create the combined-df that we use across this github
-   - The dataset will be in the `DATA/` folder
+   - Go to the `1-data.ipynb` to see HOW we created the combined-df file, however, I decided not to include every individual csv as it would have been too much data
+   - The dataset (combined_df) is in the `DATA/` folder
 
 4. Run the exploratory plots:
 
@@ -90,6 +93,7 @@ The dataset for this project is sourced from the "NCDC Storm Events Database" an
 # Tornado Analysis Results
 
 The analysis involved comparing tornado characteristics over the years, focusing on:
+
 - Proportion of Severe Tornadoes (F3 and Above)
 - Proportion of Injury-Causing Tornadoes
 - Tornado Counts by F-Scale
@@ -103,11 +107,10 @@ The analysis involved comparing tornado characteristics over the years, focusing
 
 These insights could prove valuable in allocating resources for disaster management and developing proactive policies to protect vulnerable regions.
 
+# References
 
-  # References
-  
 [1] National Centers for Environmental Information, “Storm Events Database CSV Files.” [Online]. Available: https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/. [Accessed: Oct. 31, 2024].
 
 [2] Yennhi95zz, “A Guide to Time Series Models in Machine Learning: Usage, Pros, and Cons,” Medium, Jul. 28, 2019. [Online]. Available: https://medium.com/@yennhi95zz/a-guide-to-time-series-models-in-machine-learning-usage-pros-and-cons-ac590a75e8b3. [Accessed: Oct. 31, 2024].
 
-[3] S. Berdiales, *Forecasting Models: ARIMA*, bookdown.org, 2020. [Online]. Available: https://bookdown.org/sergioberdiales/tfm-kschool_gijon_air_pollution/forecasting-models-arima.html. [Accessed: Oct. 31, 2024].
+[3] S. Berdiales, _Forecasting Models: ARIMA_, bookdown.org, 2020. [Online]. Available: https://bookdown.org/sergioberdiales/tfm-kschool_gijon_air_pollution/forecasting-models-arima.html. [Accessed: Oct. 31, 2024].
